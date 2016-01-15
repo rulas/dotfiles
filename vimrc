@@ -20,12 +20,15 @@ Plugin 'L9'
 Plugin 'git://git.wincent.com/command-t.git'
 " " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
-Bundle 'Valloric/YouCompleteMe'
+"Bundle 'Valloric/YouCompleteMe'
 " " The sparkup vim script is in a subdirectory of this repo called vim.
 " " Pass the path to set the runtimepath properly.
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " " Avoid a name conflict with L9
 Plugin 'user/L9', {'name': 'newL9'}
+
+Plugin 'airblade/vim-gitgutter'
+
 "
 " " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -83,10 +86,8 @@ set showmatch
 set tags=tags;/
 
 " 80 characters indicator
-set textwidth=80
-set colorcolumn=+1
-
-execute pathogen#infect()
+"set textwidth=80
+"set colorcolumn=+1
 
 syntax enable
 colorscheme solarized
@@ -100,3 +101,4 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 let g:ctrlp_extensions = ['tag']
 
 set laststatus=2
+set hlsearch
